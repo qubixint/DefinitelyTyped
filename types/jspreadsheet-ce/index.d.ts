@@ -407,7 +407,7 @@ declare namespace jspreadsheet {
                   cell: HTMLTableCellElement,
                   columnIndex: number,
                   rowIndex: number,
-                  value: CellValue,
+                  value: CellValue
               ) => CellValue | void)
             | undefined;
         /** Before a column is excluded. You can cancel the insert event by returning false. */
@@ -437,6 +437,7 @@ declare namespace jspreadsheet {
                   /** (e.g.) "0", "1" ... */
                   rowIndex: string,
                   value: CellValue,
+                  oldValue: CellValue
               ) => void)
             | undefined;
         /** On header change */
@@ -648,6 +649,7 @@ declare namespace jspreadsheet {
         url?: string | undefined;
         /** Global text wrapping: bool */
         wordWrap?: boolean | undefined;
+        stripHTML?: boolean | undefined;
     }
 
     interface TranslationsOptions {
